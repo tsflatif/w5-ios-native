@@ -13,6 +13,21 @@
 		430BC5AD1D8BB695003375F0 /* whatsfor5.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 430BC5AB1D8BB695003375F0 /* whatsfor5.xcdatamodeld */; };
 		430BC5AF1D8BB695003375F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 430BC5AE1D8BB695003375F0 /* Assets.xcassets */; };
 		430BC5B21D8BB695003375F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 430BC5B01D8BB695003375F0 /* LaunchScreen.storyboard */; };
+		430BC5C01D971CA5003375F0 /* Roboto in Resources */ = {isa = PBXBuildFile; fileRef = 430BC5BF1D971CA5003375F0 /* Roboto */; };
+		430BC5C21D971D40003375F0 /* Noto_Sans in Resources */ = {isa = PBXBuildFile; fileRef = 430BC5C11D971D40003375F0 /* Noto_Sans */; };
+		430BC5C41D9720AF003375F0 /* W5_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 430BC5C31D9720AF003375F0 /* W5_logo.png */; };
+		430BC5C61D9738D0003375F0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430BC5C51D9738D0003375F0 /* Constants.swift */; };
+		430BC5CB1D98DABB003375F0 /* ic_location_off_black_48dp in Resources */ = {isa = PBXBuildFile; fileRef = 430BC5CA1D98DABB003375F0 /* ic_location_off_black_48dp */; };
+		430BC5CF1D98DC1B003375F0 /* ic_menu_black_48dp in Resources */ = {isa = PBXBuildFile; fileRef = 430BC5CE1D98DC1B003375F0 /* ic_menu_black_48dp */; };
+		430BC5D11D98DFF8003375F0 /* MaterialTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430BC5D01D98DFF8003375F0 /* MaterialTextField.swift */; };
+		430BC5D31D98E023003375F0 /* MaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430BC5D21D98E023003375F0 /* MaterialView.swift */; };
+		430BC5D91DA08D4D003375F0 /* ic_search_white_48dp in Resources */ = {isa = PBXBuildFile; fileRef = 430BC5D81DA08D4D003375F0 /* ic_search_white_48dp */; };
+		430BC5DB1DA08D73003375F0 /* ic_menu_white_48dp in Resources */ = {isa = PBXBuildFile; fileRef = 430BC5DA1DA08D73003375F0 /* ic_menu_white_48dp */; };
+		430BC5DE1DA090A3003375F0 /* beefbob.png in Resources */ = {isa = PBXBuildFile; fileRef = 430BC5DD1DA090A3003375F0 /* beefbob.png */; };
+		430BC5E01DA096E9003375F0 /* ic_check_black_48dp in Resources */ = {isa = PBXBuildFile; fileRef = 430BC5DF1DA096E9003375F0 /* ic_check_black_48dp */; };
+		433488171DAC704200FEC2D6 /* beef-burrito.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 433488161DAC704200FEC2D6 /* beef-burrito.jpg */; };
+		43D8227F1DA3842600A47C01 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D8227E1DA3842600A47C01 /* FeedVC.swift */; };
+		43D822811DA3859100A47C01 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D822801DA3859100A47C01 /* PostCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +39,21 @@
 		430BC5AE1D8BB695003375F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		430BC5B11D8BB695003375F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		430BC5B31D8BB695003375F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		430BC5BF1D971CA5003375F0 /* Roboto */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Roboto; sourceTree = "<group>"; };
+		430BC5C11D971D40003375F0 /* Noto_Sans */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Noto_Sans; sourceTree = "<group>"; };
+		430BC5C31D9720AF003375F0 /* W5_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = W5_logo.png; sourceTree = "<group>"; };
+		430BC5C51D9738D0003375F0 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		430BC5CA1D98DABB003375F0 /* ic_location_off_black_48dp */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ic_location_off_black_48dp; sourceTree = "<group>"; };
+		430BC5CE1D98DC1B003375F0 /* ic_menu_black_48dp */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ic_menu_black_48dp; sourceTree = "<group>"; };
+		430BC5D01D98DFF8003375F0 /* MaterialTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialTextField.swift; sourceTree = "<group>"; };
+		430BC5D21D98E023003375F0 /* MaterialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialView.swift; sourceTree = "<group>"; };
+		430BC5D81DA08D4D003375F0 /* ic_search_white_48dp */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ic_search_white_48dp; sourceTree = "<group>"; };
+		430BC5DA1DA08D73003375F0 /* ic_menu_white_48dp */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ic_menu_white_48dp; sourceTree = "<group>"; };
+		430BC5DD1DA090A3003375F0 /* beefbob.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = beefbob.png; sourceTree = "<group>"; };
+		430BC5DF1DA096E9003375F0 /* ic_check_black_48dp */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ic_check_black_48dp; sourceTree = "<group>"; };
+		433488161DAC704200FEC2D6 /* beef-burrito.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "beef-burrito.jpg"; sourceTree = "<group>"; };
+		43D8227E1DA3842600A47C01 /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
+		43D822801DA3859100A47C01 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,8 +86,12 @@
 		430BC5A31D8BB695003375F0 /* whatsfor5 */ = {
 			isa = PBXGroup;
 			children = (
+				430BC5B91D97116F003375F0 /* Util */,
+				430BC5BA1D97117E003375F0 /* Model */,
+				430BC5BB1D971197003375F0 /* View */,
+				430BC5BC1D9711A8003375F0 /* Controller */,
+				430BC5BD1D9711B6003375F0 /* Resources */,
 				430BC5A41D8BB695003375F0 /* AppDelegate.swift */,
-				430BC5A61D8BB695003375F0 /* ViewController.swift */,
 				430BC5A81D8BB695003375F0 /* Main.storyboard */,
 				430BC5AE1D8BB695003375F0 /* Assets.xcassets */,
 				430BC5B01D8BB695003375F0 /* LaunchScreen.storyboard */,
@@ -65,6 +99,81 @@
 				430BC5AB1D8BB695003375F0 /* whatsfor5.xcdatamodeld */,
 			);
 			path = whatsfor5;
+			sourceTree = "<group>";
+		};
+		430BC5B91D97116F003375F0 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				430BC5C51D9738D0003375F0 /* Constants.swift */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
+		430BC5BA1D97117E003375F0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		430BC5BB1D971197003375F0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				430BC5D01D98DFF8003375F0 /* MaterialTextField.swift */,
+				430BC5D21D98E023003375F0 /* MaterialView.swift */,
+				43D822801DA3859100A47C01 /* PostCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		430BC5BC1D9711A8003375F0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				430BC5A61D8BB695003375F0 /* ViewController.swift */,
+				43D8227E1DA3842600A47C01 /* FeedVC.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		430BC5BD1D9711B6003375F0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				430BC5DC1DA08F68003375F0 /* Placeholder images */,
+				430BC5C91D98D95E003375F0 /* Icons */,
+				430BC5BE1D971C8D003375F0 /* Fonts */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		430BC5BE1D971C8D003375F0 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				430BC5C11D971D40003375F0 /* Noto_Sans */,
+				430BC5BF1D971CA5003375F0 /* Roboto */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
+		430BC5C91D98D95E003375F0 /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				430BC5DF1DA096E9003375F0 /* ic_check_black_48dp */,
+				430BC5DA1DA08D73003375F0 /* ic_menu_white_48dp */,
+				430BC5D81DA08D4D003375F0 /* ic_search_white_48dp */,
+				430BC5CE1D98DC1B003375F0 /* ic_menu_black_48dp */,
+				430BC5CA1D98DABB003375F0 /* ic_location_off_black_48dp */,
+			);
+			name = Icons;
+			sourceTree = "<group>";
+		};
+		430BC5DC1DA08F68003375F0 /* Placeholder images */ = {
+			isa = PBXGroup;
+			children = (
+				433488161DAC704200FEC2D6 /* beef-burrito.jpg */,
+				430BC5DD1DA090A3003375F0 /* beefbob.png */,
+				430BC5C31D9720AF003375F0 /* W5_logo.png */,
+			);
+			name = "Placeholder images";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,9 +235,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				430BC5DB1DA08D73003375F0 /* ic_menu_white_48dp in Resources */,
+				430BC5D91DA08D4D003375F0 /* ic_search_white_48dp in Resources */,
 				430BC5B21D8BB695003375F0 /* LaunchScreen.storyboard in Resources */,
+				430BC5E01DA096E9003375F0 /* ic_check_black_48dp in Resources */,
+				430BC5C21D971D40003375F0 /* Noto_Sans in Resources */,
+				433488171DAC704200FEC2D6 /* beef-burrito.jpg in Resources */,
 				430BC5AF1D8BB695003375F0 /* Assets.xcassets in Resources */,
 				430BC5AA1D8BB695003375F0 /* Main.storyboard in Resources */,
+				430BC5C41D9720AF003375F0 /* W5_logo.png in Resources */,
+				430BC5CF1D98DC1B003375F0 /* ic_menu_black_48dp in Resources */,
+				430BC5DE1DA090A3003375F0 /* beefbob.png in Resources */,
+				430BC5C01D971CA5003375F0 /* Roboto in Resources */,
+				430BC5CB1D98DABB003375F0 /* ic_location_off_black_48dp in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,9 +258,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				430BC5D11D98DFF8003375F0 /* MaterialTextField.swift in Sources */,
+				43D8227F1DA3842600A47C01 /* FeedVC.swift in Sources */,
 				430BC5AD1D8BB695003375F0 /* whatsfor5.xcdatamodeld in Sources */,
 				430BC5A71D8BB695003375F0 /* ViewController.swift in Sources */,
 				430BC5A51D8BB695003375F0 /* AppDelegate.swift in Sources */,
+				430BC5D31D98E023003375F0 /* MaterialView.swift in Sources */,
+				430BC5C61D9738D0003375F0 /* Constants.swift in Sources */,
+				43D822811DA3859100A47C01 /* PostCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,6 +417,7 @@
 				430BC5B81D8BB695003375F0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
