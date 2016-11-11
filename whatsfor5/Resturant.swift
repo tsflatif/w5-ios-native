@@ -9,8 +9,8 @@
 import Foundation
 
 class Resturant {
-    private var _resturantName: String!
-    private var _resturantID: Int!
+    fileprivate var _resturantName: String!
+    fileprivate var _resturantID: Int!
     
     var resturantName: String {
         return _resturantName

@@ -18,7 +18,7 @@ class FoodItemCell: UITableViewCell {
         // Initialization code
     }
 
-    func configureCell(item:String, price:String) {
+    func configureCell(_ item:String, price:String) {
         foodItem.text = item
         foodItemPrice.text = price
     }

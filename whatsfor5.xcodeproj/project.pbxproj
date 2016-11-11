@@ -8,13 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		430BC5A51D8BB695003375F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430BC5A41D8BB695003375F0 /* AppDelegate.swift */; };
-		430BC5A71D8BB695003375F0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430BC5A61D8BB695003375F0 /* ViewController.swift */; };
+		430BC5A71D8BB695003375F0 /* FoodCourtDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430BC5A61D8BB695003375F0 /* FoodCourtDetail.swift */; };
 		430BC5AA1D8BB695003375F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 430BC5A81D8BB695003375F0 /* Main.storyboard */; };
 		430BC5AD1D8BB695003375F0 /* whatsfor5.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 430BC5AB1D8BB695003375F0 /* whatsfor5.xcdatamodeld */; };
 		430BC5AF1D8BB695003375F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 430BC5AE1D8BB695003375F0 /* Assets.xcassets */; };
 		430BC5B21D8BB695003375F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 430BC5B01D8BB695003375F0 /* LaunchScreen.storyboard */; };
-		430BC5C01D971CA5003375F0 /* Roboto in Resources */ = {isa = PBXBuildFile; fileRef = 430BC5BF1D971CA5003375F0 /* Roboto */; };
-		430BC5C21D971D40003375F0 /* Noto_Sans in Resources */ = {isa = PBXBuildFile; fileRef = 430BC5C11D971D40003375F0 /* Noto_Sans */; };
 		430BC5C41D9720AF003375F0 /* W5_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 430BC5C31D9720AF003375F0 /* W5_logo.png */; };
 		430BC5C61D9738D0003375F0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430BC5C51D9738D0003375F0 /* Constants.swift */; };
 		430BC5CB1D98DABB003375F0 /* ic_location_off_black_48dp in Resources */ = {isa = PBXBuildFile; fileRef = 430BC5CA1D98DABB003375F0 /* ic_location_off_black_48dp */; };
@@ -25,22 +23,31 @@
 		430BC5DB1DA08D73003375F0 /* ic_menu_white_48dp in Resources */ = {isa = PBXBuildFile; fileRef = 430BC5DA1DA08D73003375F0 /* ic_menu_white_48dp */; };
 		430BC5DE1DA090A3003375F0 /* beefbob.png in Resources */ = {isa = PBXBuildFile; fileRef = 430BC5DD1DA090A3003375F0 /* beefbob.png */; };
 		430BC5E01DA096E9003375F0 /* ic_check_black_48dp in Resources */ = {isa = PBXBuildFile; fileRef = 430BC5DF1DA096E9003375F0 /* ic_check_black_48dp */; };
+		430F716F1DCB049E0000CB5E /* UIStackView+Separator.m in Sources */ = {isa = PBXBuildFile; fileRef = 430F716E1DCB049E0000CB5E /* UIStackView+Separator.m */; };
 		433488171DAC704200FEC2D6 /* beef-burrito.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 433488161DAC704200FEC2D6 /* beef-burrito.jpg */; };
-		43D8227F1DA3842600A47C01 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D8227E1DA3842600A47C01 /* FeedVC.swift */; };
+		433488421DB0A63900FEC2D6 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 433488411DB0A63900FEC2D6 /* SWRevealViewController.m */; };
+		433488481DB483C900FEC2D6 /* Roboto in Resources */ = {isa = PBXBuildFile; fileRef = 433488471DB483C900FEC2D6 /* Roboto */; };
+		4334884A1DB484CA00FEC2D6 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 433488491DB484CA00FEC2D6 /* Roboto-Light.ttf */; };
+		4334884C1DB87A3400FEC2D6 /* ResturantDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4334884B1DB87A3400FEC2D6 /* ResturantDetailVC.swift */; };
+		4334884E1DB883D500FEC2D6 /* Resturant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4334884D1DB883D500FEC2D6 /* Resturant.swift */; };
+		433488501DB88ED900FEC2D6 /* FoodCourtCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4334884F1DB88ED900FEC2D6 /* FoodCourtCell.swift */; };
+		438E3A981DB9C0A40013D4DF /* sushi.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 438E3A961DB9C0A40013D4DF /* sushi.jpg */; };
+		438E3A991DB9C0A40013D4DF /* Wok.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 438E3A971DB9C0A40013D4DF /* Wok.jpg */; };
+		43D8227F1DA3842600A47C01 /* ResturantListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D8227E1DA3842600A47C01 /* ResturantListVC.swift */; };
 		43D822811DA3859100A47C01 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D822801DA3859100A47C01 /* PostCell.swift */; };
+		43ECEACB1DCC3DA50022C2CC /* FoodItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43ECEACA1DCC3DA50022C2CC /* FoodItemCell.swift */; };
+		43ECEACD1DCC58B40022C2CC /* MallResturantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43ECEACC1DCC58B40022C2CC /* MallResturantCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		430BC5A11D8BB695003375F0 /* whatsfor5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = whatsfor5.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		430BC5A41D8BB695003375F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		430BC5A61D8BB695003375F0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		430BC5A61D8BB695003375F0 /* FoodCourtDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCourtDetail.swift; sourceTree = "<group>"; };
 		430BC5A91D8BB695003375F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		430BC5AC1D8BB695003375F0 /* whatsfor5.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = whatsfor5.xcdatamodel; sourceTree = "<group>"; };
 		430BC5AE1D8BB695003375F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		430BC5B11D8BB695003375F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		430BC5B31D8BB695003375F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		430BC5BF1D971CA5003375F0 /* Roboto */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Roboto; sourceTree = "<group>"; };
-		430BC5C11D971D40003375F0 /* Noto_Sans */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Noto_Sans; sourceTree = "<group>"; };
 		430BC5C31D9720AF003375F0 /* W5_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = W5_logo.png; sourceTree = "<group>"; };
 		430BC5C51D9738D0003375F0 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		430BC5CA1D98DABB003375F0 /* ic_location_off_black_48dp */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ic_location_off_black_48dp; sourceTree = "<group>"; };
@@ -51,9 +58,23 @@
 		430BC5DA1DA08D73003375F0 /* ic_menu_white_48dp */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ic_menu_white_48dp; sourceTree = "<group>"; };
 		430BC5DD1DA090A3003375F0 /* beefbob.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = beefbob.png; sourceTree = "<group>"; };
 		430BC5DF1DA096E9003375F0 /* ic_check_black_48dp */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ic_check_black_48dp; sourceTree = "<group>"; };
+		430F716D1DCB049E0000CB5E /* UIStackView+Separator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIStackView+Separator.h"; sourceTree = "<group>"; };
+		430F716E1DCB049E0000CB5E /* UIStackView+Separator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIStackView+Separator.m"; sourceTree = "<group>"; };
 		433488161DAC704200FEC2D6 /* beef-burrito.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "beef-burrito.jpg"; sourceTree = "<group>"; };
-		43D8227E1DA3842600A47C01 /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
+		4334883F1DB0A63800FEC2D6 /* whatsfor5-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "whatsfor5-Bridging-Header.h"; sourceTree = "<group>"; };
+		433488401DB0A63900FEC2D6 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		433488411DB0A63900FEC2D6 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		433488471DB483C900FEC2D6 /* Roboto */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Roboto; sourceTree = "<group>"; };
+		433488491DB484CA00FEC2D6 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Light.ttf"; path = "Roboto/Roboto-Light.ttf"; sourceTree = "<group>"; };
+		4334884B1DB87A3400FEC2D6 /* ResturantDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResturantDetailVC.swift; sourceTree = "<group>"; };
+		4334884D1DB883D500FEC2D6 /* Resturant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Resturant.swift; sourceTree = "<group>"; };
+		4334884F1DB88ED900FEC2D6 /* FoodCourtCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodCourtCell.swift; sourceTree = "<group>"; };
+		438E3A961DB9C0A40013D4DF /* sushi.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sushi.jpg; sourceTree = "<group>"; };
+		438E3A971DB9C0A40013D4DF /* Wok.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Wok.jpg; sourceTree = "<group>"; };
+		43D8227E1DA3842600A47C01 /* ResturantListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResturantListVC.swift; sourceTree = "<group>"; };
 		43D822801DA3859100A47C01 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		43ECEACA1DCC3DA50022C2CC /* FoodItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodItemCell.swift; sourceTree = "<group>"; };
+		43ECEACC1DCC58B40022C2CC /* MallResturantCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MallResturantCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +133,7 @@
 		430BC5BA1D97117E003375F0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4334884D1DB883D500FEC2D6 /* Resturant.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -119,9 +141,13 @@
 		430BC5BB1D971197003375F0 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				430F716C1DCB048C0000CB5E /* StackView+Seperator */,
 				430BC5D01D98DFF8003375F0 /* MaterialTextField.swift */,
 				430BC5D21D98E023003375F0 /* MaterialView.swift */,
 				43D822801DA3859100A47C01 /* PostCell.swift */,
+				4334884F1DB88ED900FEC2D6 /* FoodCourtCell.swift */,
+				43ECEACA1DCC3DA50022C2CC /* FoodItemCell.swift */,
+				43ECEACC1DCC58B40022C2CC /* MallResturantCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -129,8 +155,10 @@
 		430BC5BC1D9711A8003375F0 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				430BC5A61D8BB695003375F0 /* ViewController.swift */,
-				43D8227E1DA3842600A47C01 /* FeedVC.swift */,
+				4334883E1DB0A60900FEC2D6 /* SWRevealViewController */,
+				430BC5A61D8BB695003375F0 /* FoodCourtDetail.swift */,
+				43D8227E1DA3842600A47C01 /* ResturantListVC.swift */,
+				4334884B1DB87A3400FEC2D6 /* ResturantDetailVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -138,6 +166,7 @@
 		430BC5BD1D9711B6003375F0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				433488491DB484CA00FEC2D6 /* Roboto-Light.ttf */,
 				430BC5DC1DA08F68003375F0 /* Placeholder images */,
 				430BC5C91D98D95E003375F0 /* Icons */,
 				430BC5BE1D971C8D003375F0 /* Fonts */,
@@ -148,8 +177,7 @@
 		430BC5BE1D971C8D003375F0 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				430BC5C11D971D40003375F0 /* Noto_Sans */,
-				430BC5BF1D971CA5003375F0 /* Roboto */,
+				433488471DB483C900FEC2D6 /* Roboto */,
 			);
 			name = Fonts;
 			sourceTree = "<group>";
@@ -169,11 +197,32 @@
 		430BC5DC1DA08F68003375F0 /* Placeholder images */ = {
 			isa = PBXGroup;
 			children = (
+				438E3A961DB9C0A40013D4DF /* sushi.jpg */,
+				438E3A971DB9C0A40013D4DF /* Wok.jpg */,
 				433488161DAC704200FEC2D6 /* beef-burrito.jpg */,
 				430BC5DD1DA090A3003375F0 /* beefbob.png */,
 				430BC5C31D9720AF003375F0 /* W5_logo.png */,
 			);
 			name = "Placeholder images";
+			sourceTree = "<group>";
+		};
+		430F716C1DCB048C0000CB5E /* StackView+Seperator */ = {
+			isa = PBXGroup;
+			children = (
+				430F716D1DCB049E0000CB5E /* UIStackView+Separator.h */,
+				430F716E1DCB049E0000CB5E /* UIStackView+Separator.m */,
+			);
+			name = "StackView+Seperator";
+			sourceTree = "<group>";
+		};
+		4334883E1DB0A60900FEC2D6 /* SWRevealViewController */ = {
+			isa = PBXGroup;
+			children = (
+				433488401DB0A63900FEC2D6 /* SWRevealViewController.h */,
+				433488411DB0A63900FEC2D6 /* SWRevealViewController.m */,
+				4334883F1DB0A63800FEC2D6 /* whatsfor5-Bridging-Header.h */,
+			);
+			name = SWRevealViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,12 +252,13 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "Tauseef Latif";
 				TargetAttributes = {
 					430BC5A01D8BB695003375F0 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = GYLD5Y8V2T;
+						LastSwiftMigration = 0810;
 					};
 				};
 			};
@@ -239,15 +289,17 @@
 				430BC5D91DA08D4D003375F0 /* ic_search_white_48dp in Resources */,
 				430BC5B21D8BB695003375F0 /* LaunchScreen.storyboard in Resources */,
 				430BC5E01DA096E9003375F0 /* ic_check_black_48dp in Resources */,
-				430BC5C21D971D40003375F0 /* Noto_Sans in Resources */,
+				438E3A981DB9C0A40013D4DF /* sushi.jpg in Resources */,
 				433488171DAC704200FEC2D6 /* beef-burrito.jpg in Resources */,
 				430BC5AF1D8BB695003375F0 /* Assets.xcassets in Resources */,
 				430BC5AA1D8BB695003375F0 /* Main.storyboard in Resources */,
 				430BC5C41D9720AF003375F0 /* W5_logo.png in Resources */,
+				438E3A991DB9C0A40013D4DF /* Wok.jpg in Resources */,
 				430BC5CF1D98DC1B003375F0 /* ic_menu_black_48dp in Resources */,
+				4334884A1DB484CA00FEC2D6 /* Roboto-Light.ttf in Resources */,
 				430BC5DE1DA090A3003375F0 /* beefbob.png in Resources */,
-				430BC5C01D971CA5003375F0 /* Roboto in Resources */,
 				430BC5CB1D98DABB003375F0 /* ic_location_off_black_48dp in Resources */,
+				433488481DB483C900FEC2D6 /* Roboto in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,13 +311,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				430BC5D11D98DFF8003375F0 /* MaterialTextField.swift in Sources */,
-				43D8227F1DA3842600A47C01 /* FeedVC.swift in Sources */,
+				43D8227F1DA3842600A47C01 /* ResturantListVC.swift in Sources */,
+				433488501DB88ED900FEC2D6 /* FoodCourtCell.swift in Sources */,
 				430BC5AD1D8BB695003375F0 /* whatsfor5.xcdatamodeld in Sources */,
-				430BC5A71D8BB695003375F0 /* ViewController.swift in Sources */,
+				430BC5A71D8BB695003375F0 /* FoodCourtDetail.swift in Sources */,
 				430BC5A51D8BB695003375F0 /* AppDelegate.swift in Sources */,
+				433488421DB0A63900FEC2D6 /* SWRevealViewController.m in Sources */,
+				43ECEACD1DCC58B40022C2CC /* MallResturantCell.swift in Sources */,
+				4334884C1DB87A3400FEC2D6 /* ResturantDetailVC.swift in Sources */,
 				430BC5D31D98E023003375F0 /* MaterialView.swift in Sources */,
 				430BC5C61D9738D0003375F0 /* Constants.swift in Sources */,
+				4334884E1DB883D500FEC2D6 /* Resturant.swift in Sources */,
 				43D822811DA3859100A47C01 /* PostCell.swift in Sources */,
+				43ECEACB1DCC3DA50022C2CC /* FoodItemCell.swift in Sources */,
+				430F716F1DCB049E0000CB5E /* UIStackView+Separator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,8 +364,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -351,8 +412,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -371,6 +434,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -380,10 +444,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = whatsfor5/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tlatif.whatsfor5;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "whatsfor5/whatsfor5-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -391,10 +459,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = whatsfor5/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tlatif.whatsfor5;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "whatsfor5/whatsfor5-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

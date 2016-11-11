@@ -25,7 +25,7 @@ class ResturantListVC: UIViewController, UITableViewDelegate, UITableViewDataSou
         
         //Add logo to thecenter of the navigation bar
         let logoImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 150, height: 40))
-        logoImageView.contentMode = .ScaleAspectFit
+        logoImageView.contentMode = .scaleAspectFit
         
         let logoImage = UIImage(named: "W5_logo")
         logoImageView.image = logoImage
@@ -42,15 +42,15 @@ class ResturantListVC: UIViewController, UITableViewDelegate, UITableViewDataSou
         
     }
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 6
     }
     
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.row % 2 == 0 {
             return 150
         }
@@ -60,13 +60,13 @@ class ResturantListVC: UIViewController, UITableViewDelegate, UITableViewDataSou
         }
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row % 2 == 0 {
-            return tableView.dequeueReusableCellWithIdentifier("PostCell") as! PostCell
+            return tableView.dequeueReusableCell(withIdentifier: "PostCell") as! PostCell
         }
         
         else {
-            return tableView.dequeueReusableCellWithIdentifier("FoodCourtCell") as! FoodCourtCell
+            return tableView.dequeueReusableCell(withIdentifier: "FoodCourtCell") as! FoodCourtCell
         }
     }
     

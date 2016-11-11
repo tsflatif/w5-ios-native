@@ -12,17 +12,17 @@ class MaterialTextField: UITextField {
 
     override func awakeFromNib() {
         layer.cornerRadius = 2.0
-        layer.shadowColor = SHADOW_COLOR.CGColor
+        layer.shadowColor = SHADOW_COLOR.cgColor
         layer.borderWidth = 1.0
     }
     
     //For Placeholder
-    override func textRectForBounds(bounds: CGRect) -> CGRect {
-        return CGRectInset(bounds, 10, 0)
+    override func textRect(forBounds bounds: CGRect) -> CGRect {
+        return bounds.insetBy(dx: 10, dy: 0)
     }
     //For Editable Text
-    override func editingRectForBounds(bounds: CGRect) -> CGRect {
-        return CGRectInset(bounds, 10, 0)
+    override func editingRect(forBounds bounds: CGRect) -> CGRect {
+        return bounds.insetBy(dx: 10, dy: 0)
     }
 
 }

@@ -13,16 +13,16 @@ class FoodCourtCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        layer.backgroundColor = GRAY_BKGND_COLOR.CGColor
+        layer.backgroundColor = GRAY_BKGND_COLOR.cgColor
         
         layer.cornerRadius = 2.0
-        layer.shadowColor = SHADOW_COLOR.CGColor
+        layer.shadowColor = SHADOW_COLOR.cgColor
         layer.shadowOpacity = 0.8
         layer.shadowRadius = 5.0
-        layer.shadowOffset = CGSizeMake(0.0, 2.0)
+        layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
     }
 
-    override func setSelected(selected: Bool, animated: Bool) {
+    override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state

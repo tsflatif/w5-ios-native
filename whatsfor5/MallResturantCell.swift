@@ -18,7 +18,7 @@ class MallResturantCell: UITableViewCell {
         // Initialization code
     }
     
-    func configureCell(item:String) {//, image:UIImage) {
+    func configureCell(_ item:String) {//, image:UIImage) {
         resturantName.text = item
         //resturantImg.image = image
     }
