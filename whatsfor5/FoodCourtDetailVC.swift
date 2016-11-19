@@ -1,15 +1,14 @@
 //
-//  ResturantDetailVC.swift
+//  ViewController.swift
 //  whatsfor5
 //
-//  Created by Tauseef Latif on 2016-10-20.
+//  Created by Tauseef Latif on 2016-09-16.
 //  Copyright © 2016 Tauseef Latif. All rights reserved.
 //
 
 import UIKit
 
-class ResturantDetailVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
+class FoodCourtDetailVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -18,10 +17,8 @@ class ResturantDetailVC: UIViewController, UITableViewDelegate, UITableViewDataS
         tableView.delegate = self
         tableView.dataSource = self
         tableView.tableFooterView = UIView()
-
-        // Do any additional setup after loading the view.
     }
-    
+
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -31,20 +28,19 @@ class ResturantDetailVC: UIViewController, UITableViewDelegate, UITableViewDataS
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let cell = tableView.dequeueReusableCell(withIdentifier: "FoodItemCell") as? FoodItemCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "FoodCourtResturantCell") as? FoodCourtResturantCell {
             
-            cell.configureCell("Chickkon Burrito", price: "$3.99")
+            cell.configureCell("Gaseous Fartous")
             
             return cell
         } else {
-            return FoodItemCell()
+            return FoodCourtResturantCell()
         }
-        
     }
     
     @IBAction func backTapped(_ sender: Any) {
         _ = self.navigationController?.popViewController(animated: true)
     }
     
-
 }
+

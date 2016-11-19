@@ -12,10 +12,17 @@ class ResturantListVC: UIViewController, UITableViewDelegate, UITableViewDataSou
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var menuButton: UIBarButtonItem!
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+//    }
+//    
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
         
         //Tableview delegates
         tableView.delegate = self
@@ -52,17 +59,17 @@ class ResturantListVC: UIViewController, UITableViewDelegate, UITableViewDataSou
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.row % 2 == 0 {
-            return 150
+            return 200
         }
             
         else {
-            return 200
+            return 300
         }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row % 2 == 0 {
-            return tableView.dequeueReusableCell(withIdentifier: "PostCell") as! PostCell
+            return tableView.dequeueReusableCell(withIdentifier: "ResturantCell") as! ResturantCell
         }
         
         else {
