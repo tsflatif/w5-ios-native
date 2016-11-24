@@ -13,20 +13,23 @@ class ResturantListVC: UIViewController, UITableViewDelegate, UITableViewDataSou
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var menuButton: UIBarButtonItem!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
+        
+        self.tableView.reloadData()
+    }
+
+//    override func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(true)
 //    }
 //    
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
+    override func viewDidLoad() {
+        super.viewDidLoad()
         
         //Tableview delegates
         tableView.delegate = self
         tableView.dataSource = self
+        
 
         
         

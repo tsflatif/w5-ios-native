@@ -18,6 +18,12 @@ class FoodCourtDetailVC: UIViewController, UITableViewDelegate, UITableViewDataS
         tableView.dataSource = self
         tableView.tableFooterView = UIView()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        self.tableView.reloadData()
+    }
 
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -36,6 +42,10 @@ class FoodCourtDetailVC: UIViewController, UITableViewDelegate, UITableViewDataS
         } else {
             return FoodCourtResturantCell()
         }
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 50
     }
     
     @IBAction func backTapped(_ sender: Any) {

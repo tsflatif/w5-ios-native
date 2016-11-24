@@ -22,6 +22,12 @@ class ResturantDetailVC: UIViewController, UITableViewDelegate, UITableViewDataS
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        self.tableView.reloadData()
+    }
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }

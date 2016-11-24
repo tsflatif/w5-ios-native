@@ -1,5 +1,5 @@
 //
-//  SettingsVC.swift
+//  AllResturantVC.swift
 //  whatsfor5
 //
 //  Created by Tauseef Latif on 2016-11-19.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SettingsVC: UIViewController {
+class AllResturantVC: UIViewController {
 
     @IBOutlet weak var menuButton: UIBarButtonItem!
     override func viewDidLoad() {
