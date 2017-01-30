@@ -7,12 +7,22 @@
 //
 
 import UIKit
+import DropDown
 
 class ChangeItemPriceVC: UIViewController {
 
+    
+    @IBOutlet weak var viewPickItem: UIButton!
+    let dropDown = DropDown()
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        dropDown.dataSource = ["Cars","Mouse","Albatrous","Very Big belly buster shwarma you animal","Albatrous","Mouse","Albatrous","Mouse","Albatrous","Mouse","Albatrous","Mouse","Albatrous","Mouse","Albatrous","Mouse","Albatrous","Mouse","Albatrous","Mouse","Albatrous","Mouse","Albatrous","Mouse","Albatrous","Mouse","Albatrous","Mouse","Albatrous","Mouse","Albatrous","Mouse","Albatrous","Mouse","Albatrous","Mouse","Albatrous","Mouse","Albatrous","Mouse","Albatrous","Mouse","Albatrous","Mouse","Albatrous","Mouse","Albatrous","Mouse","Albatrous","Mouse","Albatrous","Mouse","Albatrous","Mouse","Albatrous","Mouse","Albatrous","Mouse","Albatrous","Mouse","Albatrous","Mouse","Albatrous"]
 
+        dropDown.anchorView = viewPickItem
         // Do any additional setup after loading the view.
     }
 
@@ -25,4 +35,17 @@ class ChangeItemPriceVC: UIViewController {
         _ = self.navigationController?.popViewController(animated: true)
     }
 
+    
+    @IBAction func changeTapped(_ sender: Any) {
+        dropDown.show()
+        
+        dropDown.selectionAction = { [unowned self] (index: Int, item: String) in
+            
+            self.viewPickItem.setTitle("\(item)", for: UIControlState.normal)
+            
+            self.viewPickItem.tintColor = POSITIVE_COLOR
+            
+        }
+    }
+    
 }

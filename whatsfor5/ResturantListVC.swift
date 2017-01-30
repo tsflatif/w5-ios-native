@@ -66,7 +66,7 @@ class ResturantListVC: UIViewController, UITableViewDelegate, UITableViewDataSou
         }
             
         else {
-            return 300
+            return 310
         }
     }
     
