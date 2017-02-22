@@ -8,159 +8,96 @@
 
 import UIKit
 import TextFieldEffects
+import PopupDialog
 
-class AddNewResturantVC: UIViewController, UITextFieldDelegate, UITextViewDelegate {
+class AddNewResturantVC: UIViewController, UITextFieldDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var menuButton: UIBarButtonItem!
+    @IBOutlet weak var resturantImageView: UIImageView!
     
     @IBOutlet weak var resturantNameText: HoshiTextField!
     @IBOutlet weak var categoryText: HoshiTextField!
     @IBOutlet weak var cityText: HoshiTextField!
     
-    //var activeTextField: HoshiTextField?
-    var addressArray: [HoshiTextField]?
+    var itemArray: [Any]?
+    var imagePicker = UIImagePickerController()
+    var resturantName: String?
+    var city: String?
+    var postalCode: String?
+    var streetAddress: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         addObservers()
         
-        addressArray = [self.resturantNameText, self.categoryText, self.cityText]
-        
-        for addressText in addressArray! {
-            initCustomTextField(textFieldItem: addressText)
+        itemArray = [self.resturantNameText, self.categoryText, self.cityText, self.resturantImageView, self.imagePicker]
+        for delegateItems in itemArray! {
+            setDelegates(item: delegateItems)
         }
         
-        if revealViewController() != nil {
-            menuButton.target = revealViewController()
-            menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
-            view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
-            view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        if (resturantName == nil) {
+            showMapOption()
+        } else {
+            resturantNameText.text = resturantName
+            cityText.text = cityList.contains(city!) ? city : nil
         }
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        removeObservers()
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
     
-    func keyboardWillShow(notification: NSNotification) {
-        
-        
-//        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
-//            let frameYPos = UIApplication.shared.statusBarFrame.height + (self.navigationController?.navigationBar.frame.size.height)!
-//            let fieldYPos = (activeTextField?.frame.origin.y)! - (activeTextField?.frame.height)!
-//            
-//            if self.view.frame.origin.y == frameYPos{
-//                self.view.frame.origin.y = self.view.frame.origin.y - fieldYPos + keyboardSize.height
-//                
-//                if self.view.frame.origin.y > frameYPos {
-//                    self.view.frame.origin.y = frameYPos
-//                }
-//            }
-//        }
-    }
-    
-    func keyboardWillHide(notification: NSNotification) {
-        
-//        let frameYPos = UIApplication.shared.statusBarFrame.height + (self.navigationController?.navigationBar.frame.size.height)!
-//        if self.view.frame.origin.y != frameYPos{
-//            self.view.frame.origin.y = frameYPos
-//        }
-    }
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        if (sideMenuOpen == true) {
+            self.revealViewController().rightRevealToggle(animated: true)
+            return false
+        }
         return true
     }
     
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-    }
-    
-    func textFieldDidEndEditing(_ textField: UITextField) {
-    }
-    
-    
-    @IBAction func categoryTextChanged(_ sender: UITextField) {
-
-    }
-    
-    @IBAction func cityTextChanged(_ sender: UITextField) {
-        
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
 
-    // MARK: - non built-in functions
+    // MARK: - items tapped
     
     func categoryTextTapped() {
-        let pickerView = CustomPickerDialog.init()
-        let arrayDataSource = catergoryList
-        pickerView.setDataSource(arrayDataSource)
-        
-        pickerView.showDialog("Category", doneButtonTitle: "done", cancelButtonTitle: "cancel") { (result) -> Void in
-            self.categoryText.text = "\(result)"
+        if (sideMenuOpen == true) {
+            self.revealViewController().rightRevealToggle(animated: true)
+        }
+        else {
+            let pickerView = CustomPickerDialog.init()
+            let arrayDataSource = catergoryList
+            pickerView.setDataSource(arrayDataSource)
+            
+            pickerView.showDialog("Category", doneButtonTitle: "Done", cancelButtonTitle: "Cancel") { (result) -> Void in
+                self.categoryText.text = "\(result)"
+            }
         }
     }
     
     func cityTextTapped() {
-        let pickerView = CustomPickerDialog.init()
-        let arrayDataSource = cityList
-        pickerView.setDataSource(arrayDataSource)
-        
-        pickerView.showDialog("City", doneButtonTitle: "done", cancelButtonTitle: "cancel") { (result) -> Void in
-            self.cityText.text = "\(result)"
+        if (sideMenuOpen == true) {
+            self.revealViewController().rightRevealToggle(animated: true)
         }
-    }
-    
-    func initCustomTextField(textFieldItem: HoshiTextField) {
-        textFieldItem.delegate = self
-        textFieldItem.autocorrectionType = .no
+        else {
+            let pickerView = CustomPickerDialog.init()
+            let arrayDataSource = cityList
+            pickerView.setDataSource(arrayDataSource)
         
-        if textFieldItem == categoryText {
-            let tap1 = UITapGestureRecognizer(target: self, action: #selector(AddNewResturantVC.categoryTextTapped))
-            
-            let dummyView = UIView(frame: self.categoryText.frame)
-            self.view.addSubview(dummyView)
-            dummyView.addGestureRecognizer(tap1)
-        }
-        
-        if textFieldItem == cityText {
-            let tap = UITapGestureRecognizer(target: self, action: #selector(AddNewResturantVC.cityTextTapped))
-            let dummyView = UIView(frame: self.cityText.frame)
-            self.view.addSubview(dummyView)
-            dummyView.addGestureRecognizer(tap)
-        }
-        
-    }
-    
-    func addObservers() {
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: .UIKeyboardWillShow, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: .UIKeyboardWillHide, object: nil)
-    }
-    
-    func removeObservers() {
-        NotificationCenter.default.removeObserver(self, name: .UIKeyboardWillShow, object: nil)
-        NotificationCenter.default.removeObserver(self, name: .UIKeyboardWillHide, object: nil)
-    }
-    
-    func setDelegates(_ fields: AnyObject...) {
-        for item in fields {
-            if let textField = item as? UITextField {
-                textField.delegate = self
-            }
-            if let textView = item as? UITextView {
-                textView.delegate = self
+            pickerView.showDialog("City", doneButtonTitle: "Done", cancelButtonTitle: "Cancel") { (result) -> Void in
+                self.cityText.text = "\(result)"
             }
         }
     }
     
     @IBAction func nextButtonPressed(_ sender: Any) {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "AddNewResturant2VC") as! AddNewResturant2VC
+        vc.streetAddress = self.streetAddress
+        vc.postalCode = self.postalCode
+        vc.resturantImage = self.resturantImageView.image
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 
     /*
@@ -173,4 +110,122 @@ class AddNewResturantVC: UIViewController, UITextFieldDelegate, UITextViewDelega
     }
     */
 
+}
+extension AddNewResturantVC {
+    func setDelegates(item: Any) {
+        if let textField = item as? HoshiTextField {
+            textField.delegate = self
+            textField.autocorrectionType = .no
+            
+            if textField == categoryText {
+                let tap1 = UITapGestureRecognizer(target: self, action: #selector(AddNewResturantVC.categoryTextTapped))
+                
+                let dummyView = UIView(frame: self.categoryText.frame)
+                self.view.addSubview(dummyView)
+                dummyView.addGestureRecognizer(tap1)
+            }
+            
+            if textField == cityText {
+                let tap = UITapGestureRecognizer(target: self, action: #selector(AddNewResturantVC.cityTextTapped))
+                let dummyView = UIView(frame: self.cityText.frame)
+                self.view.addSubview(dummyView)
+                dummyView.addGestureRecognizer(tap)
+            }
+        }
+        if let imageView = item as? UIImageView {
+            if imageView == resturantImageView {
+                let tap = UITapGestureRecognizer(target: self, action: #selector(AddNewResturantVC.resturantImageViewTapped))
+                let dummyView = UIView(frame: self.resturantImageView.frame)
+                self.view.addSubview(dummyView)
+                dummyView.addGestureRecognizer(tap)
+            }
+        }
+        if let imagePicker = item as? UIImagePickerController {
+            imagePicker.delegate = self
+        }
+    }
+    
+    func showMapOption() {
+        let useMapMsg = "Auto fill resurant address using maps?"
+        
+        let alertController = UIAlertController(title: nil, message: useMapMsg, preferredStyle: .alert)
+        alertController.view.tintColor = SECONDARY_BAR_COLOR
+        
+        let manualAction = UIAlertAction(title: "Enter Manually", style: .default) { action in }
+        
+        let mapAction = UIAlertAction(title: "Use Map", style: .default) { action in
+            let mapController = self.storyboard!.instantiateViewController(withIdentifier: "MapSelect") as! MapSelectVC
+            self.navigationController?.navigationBar.tintColor = UIColor.white
+            self.navigationController?.show(mapController, sender: nil)
+        }
+        
+        alertController.addAction(mapAction)
+        alertController.addAction(manualAction)
+        self.present(alertController, animated: true)
+    }
+    
+    func addObservers() {
+        if revealViewController() != nil {
+            menuButton.target = revealViewController()
+            menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
+            view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
+            view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        }
+    }
+}
+
+extension AddNewResturantVC : UIImagePickerControllerDelegate {
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        if let editedImage = info[UIImagePickerControllerEditedImage] as? UIImage {
+            resturantImageView.contentMode = .scaleAspectFill
+            resturantImageView.image = editedImage
+        } else if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            resturantImageView.contentMode = .scaleAspectFill
+            resturantImageView.image = pickedImage
+        }
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func resturantImageViewTapped() {
+        if (sideMenuOpen == true) {
+            self.revealViewController().rightRevealToggle(animated: true)
+        }
+        else {
+            let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .alert)
+            alertController.view.tintColor = SECONDARY_BAR_COLOR
+            
+            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { action in
+            }
+            
+            let cameraAction = UIAlertAction(title: "Camera", style: .default) { action in
+                if UIImagePickerController.isSourceTypeAvailable(.camera) {
+                    self.imagePicker.allowsEditing = true
+                    self.imagePicker.sourceType = .camera
+                    self.imagePicker.cameraCaptureMode = .photo
+                    self.imagePicker.modalPresentationStyle = .fullScreen
+                    self.present(self.imagePicker,animated: true,completion: nil)
+                } else {
+                    self.customAlertMsg(title: "No Camera", message: "Sorry, this device has no camera")
+                }
+            }
+            
+            let photoLibraryAction = UIAlertAction(title: "Photo Library", style: .default) { action in
+                self.imagePicker.allowsEditing = true
+                self.imagePicker.sourceType = .photoLibrary
+                self.imagePicker.navigationBar.barTintColor = NAVIGATION_BAR_COLOR
+                self.imagePicker.navigationBar.isTranslucent = false
+                self.imagePicker.navigationBar.tintColor = UIColor.white
+                self.present(self.imagePicker, animated: true, completion: nil)
+            }
+            alertController.addAction(cancelAction)
+            alertController.addAction(cameraAction)
+            alertController.addAction(photoLibraryAction)
+            self.present(alertController, animated: true)
+        }
+    }
 }
