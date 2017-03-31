@@ -136,7 +136,7 @@ class ResturantListVC: UIViewController, UITableViewDelegate, UITableViewDataSou
                     //self.resturantCellList = []
 
                     if let postDict = snapshot.value as? Dictionary<String, AnyObject> {
-                        let resturant = Resturant(resturantKey: key!, dictionary: postDict)
+                        let resturant = Resturant(resturantKey: key!, dictionary: postDict, userLocation: self.userLocation)
                         self.resturantCellList.append(resturant)
                     }
                     //print(self.resturantCellList.count)
@@ -151,7 +151,6 @@ class ResturantListVC: UIViewController, UITableViewDelegate, UITableViewDataSou
                 })
             })
         }
-        //print(self.resturantCellList.count)
         foundQuery = nil
         
     }

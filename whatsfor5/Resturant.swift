@@ -101,7 +101,7 @@ class Resturant {
         self._imageUrl = resturantImage
     }
     
-    init(resturantKey: String, dictionary: Dictionary<String, AnyObject>) {
+    init(resturantKey: String, dictionary: Dictionary<String, AnyObject>, userLocation: CLLocation) {
         self._resturantKey = resturantKey
         
         if let resturantName = dictionary[RESTURANT_NAME] as? String {
@@ -118,7 +118,10 @@ class Resturant {
         //}
         
         if let latitude = dictionary["l"]?["latitude"] as? Double, let longitude = dictionary["l"]?["longitude"] as? Double {
-            self._walkMinutes = checkDistance(latitude: latitude, longitude: longitude)
+            self._walkMinutes = checkDistance(toLatitude: latitude,
+                                              toLongitude: longitude,
+                                              userLatitude: userLocation.coordinate.latitude,
+                                              userLongitude: userLocation.coordinate.longitude)
             self._walkTime = "\(walkMinutes) mins walk"
         }
         
@@ -148,23 +151,9 @@ class Resturant {
         
     }
     
-    func checkDistance(latitude: Double, longitude: Double) -> Int{
-        let toLocation = CLLocation(latitude: latitude, longitude: longitude)
-        let fromLocation = CLLocation(latitude: 43.7071896, longitude: -79.3416318)
-        
-//        let locationManager = CLLocationManager()
-//        
-//        // Ask for Authorisation from the User.
-//        locationManager.requestAlwaysAuthorization()
-//        
-//        // For use in foreground
-//        locationManager.requestWhenInUseAuthorization()
-//        
-//        if CLLocationManager.locationServicesEnabled() {
-//            locationManager.delegate = CLLocationManagerDelegate
-//            locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
-//            locationManager.startUpdatingLocation()
-//        }
+    func checkDistance(toLatitude: Double, toLongitude: Double, userLatitude: Double, userLongitude: Double) -> Int{
+        let toLocation = CLLocation(latitude: toLatitude, longitude: toLongitude)
+        let fromLocation = CLLocation(latitude: userLatitude, longitude: userLongitude)
         
         let distanceInMeters = toLocation.distance(from: fromLocation)
         let walkMinutes = lround(distanceInMeters / (5000/60))
