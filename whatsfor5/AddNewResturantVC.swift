@@ -9,6 +9,10 @@
 import UIKit
 import TextFieldEffects
 import PopupDialog
+import MapKit
+import Firebase
+import FirebaseDatabase
+import GeoFire
 
 class AddNewResturantVC: UIViewController, UITextFieldDelegate, UINavigationControllerDelegate {
 
@@ -22,9 +26,13 @@ class AddNewResturantVC: UIViewController, UITextFieldDelegate, UINavigationCont
     var itemArray: [Any]?
     var imagePicker = UIImagePickerController()
     var resturantName: String?
+    var category: String?
     var city: String?
     var postalCode: String?
     var streetAddress: String?
+    
+    var restu = [Resturant]()
+    var geofire: GeoFire?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,15 +42,16 @@ class AddNewResturantVC: UIViewController, UITextFieldDelegate, UINavigationCont
         for delegateItems in itemArray! {
             setDelegates(item: delegateItems)
         }
-        
+        //showMapOption()
         if (resturantName == nil) {
             showMapOption()
         } else {
             resturantNameText.text = resturantName
+            categoryText.text = category
             cityText.text = cityList.contains(city!) ? city : nil
         }
     }
-    
+
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
@@ -68,12 +77,17 @@ class AddNewResturantVC: UIViewController, UITextFieldDelegate, UINavigationCont
         }
         else {
             let pickerView = CustomPickerDialog.init()
-            let arrayDataSource = catergoryList
+            let arrayDataSource = categoryList
             pickerView.setDataSource(arrayDataSource)
             
             pickerView.showDialog("Category", doneButtonTitle: "Done", cancelButtonTitle: "Cancel") { (result) -> Void in
                 self.categoryText.text = "\(result)"
             }
+//            let searchTable = self.storyboard!.instantiateViewController(withIdentifier: "searchTable") as! searchTableVC
+//            searchTable.data = categoryList
+//            self.navigationController?.navigationBar.tintColor = UIColor.white
+//            self.navigationController?.show(searchTable, sender: nil)
+            
         }
     }
     
@@ -93,26 +107,110 @@ class AddNewResturantVC: UIViewController, UITextFieldDelegate, UINavigationCont
     }
     
     @IBAction func nextButtonPressed(_ sender: Any) {
-        let vc = storyboard?.instantiateViewController(withIdentifier: "AddNewResturant2VC") as! AddNewResturant2VC
-        vc.streetAddress = self.streetAddress
-        vc.postalCode = self.postalCode
-        vc.resturantImage = self.resturantImageView.image
-        self.navigationController?.pushViewController(vc, animated: true)
-    }
+        print("pressed")
+//        let vc = storyboard?.instantiateViewController(withIdentifier: "AddNewResturant2VC") as! AddNewResturant2VC
+//        vc.streetAddress = self.streetAddress
+//        vc.postalCode = self.postalCode
+//        vc.resturantImage = self.resturantImageView.image
+//        self.navigationController?.pushViewController(vc, animated: true)
+        
+//        AuthProvider.Instance.signUp(withEmail: "mewo@cat.com", password: "123456", loginHandler: { (message) in
+//            
+//            if message != nil {
+//            } else {
+//                
+//            }
+//            
+//        });
+//        
+        let data: Dictionary<String, Any> = [RESTURANT_ID: "Silly Kitty",
+                                            RESTURANT_NAME: "Paramount Fine Foods",// resturantNameText.text ?? "",
+                                             "resturant_type": "Seafood",
+                                             "business_type": "Franchisee",
+                                             "phone": "6477897890",
+                                             "website": "www.ultimatekitty.com",
+                                             "email": "meow@cat.com",
+                                             "address_1": "747 Don Mills Rd",
+                                             "city_town": "Toronto",
+                                             "state_province": "Ontario",
+                                             "country": "Sparta",
+                                             "resturant_image" : "https://firebasestorage.googleapis.com/v0/b/whatsfor5test.appspot.com/o/paramount.jpg?alt=media&token=07beda8d-bd84-4a0e-b9c1-caace445a9fd",
+                                             "takes_cash": true,
+                                             "takes_credit": true,
+                                             "takes_debit": true,
+                                             "is_take_out": false,
+                                             "is_foodcourt": true,
+                                             "date_updated": "yyyy-mm-dd hh:mm:ss",
+                                             "resturant_status": "active",
+                                             "menu_item_number": 3,
+                                             "operating_hours": ["monday" :["open": 0800, "close": 2300],
+                                                                 "tuesday" :["open": 0800, "close": 2300],
+                                                                 "wednesday" :["open": 0800, "close": 2300],
+                                                                 "thursday" :["open": 0800, "close": 2300],
+                                                                 "friday" :["open": 0800, "close": 2300],
+                                                                 "saturday" :["open": 0800, "close": 2300],
+                                                                 "sunday" :["open": 0800, "close": 2300]]]
+//                                             "menu_item": ["menu_item_name" : "Chilli Chicken",
+//                                                           "menu_item_price": 8.99,
+//                                                           "menu_item_description": "Spicy Shit"]]
+        
 
-    /*
-    // MARK: - Navigation
+        //DBProvider.Instance.REF_RESTURANTS.childByAutoId().setValue(data)
+        let latitude: CLLocationDegrees = 43.7364404
+        let longitude: CLLocationDegrees = -79.3443833
+        
+        let restulocation: CLLocation = CLLocation(latitude: latitude,
+                                              longitude: longitude)
+        let uniqRef = DBProvider.Instance.REF_RESTURANTS.childByAutoId()
+        uniqRef.setValue(data)
+        geofire = GeoFire(firebaseRef: DBProvider.Instance.REF_GEO)
+        geofire?.setLocation(restulocation, forKey: uniqRef.key)
+        
+//        let menuItemData: Dictionary<String, Any> = ["menu_item_name": resturantNameText.text ?? "",
+//                                                 "menu_item_price": 8.99,
+//                                                 "menu_item_description": resturantNameText.text ?? ""]
+//        
+//        DBProvider.Instance.REF_RESTURANTS.child("-Kezn5P1UatwlxPXiYF5/menu_item").childByAutoId().updateChildValues(menuItemData)
+//        
+//        
+//        let itemData: Dictionary<String, Any> = ["menu_item_name": "Kacchi",
+//                                                 "menu_item_price": 8.99,
+//                                                 "menu_item_description": "Spicy shit"]
+        
+        //DBProvider.Instance.REF_MENU.child("/menu_item/\(self.user.uid)").childByAutoId().setValue(itemData)
+        //-KeameSODRQMOVMik3Za
+        
+        //DBProvider.Instance.REF_MENU.child("-KeameSODRQMOVMik3Za").setValue(itemData)
+        
+//        let faqQuery = DBProvider.Instance.REF_MENU.queryOrdered(byChild: "menu_id").queryEqual(toValue: "1234567890")
+//        
+//        //faqQuery.setValue(itemData)
+//        
+//        
+//        faqQuery.observe(.value, with: { snapshot in
+//            
+//            if let result = snapshot.children.allObjects as? [FIRDataSnapshot] {
+//                for child in result {
+//                    var userKey = child.key as! String
+//                    
+//                    print(userKey)
+//                    DBProvider.Instance.REF_MENU.child("\(userKey)/menu_item").childByAutoId().setValue(itemData)
+//                    break
+//                    //if(userKey == userKeyYouWantToUpdateDeviceFor){
+//                        //rootRef.child("users").child(userKey).child("device").setValue(device)
+//                    //}
+//                }
+//            }
+//        })
+        
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
     }
-    */
 
 }
+
+// Private functions
 extension AddNewResturantVC {
-    func setDelegates(item: Any) {
+    fileprivate func setDelegates(item: Any) {
         if let textField = item as? HoshiTextField {
             textField.delegate = self
             textField.autocorrectionType = .no
@@ -151,7 +249,13 @@ extension AddNewResturantVC {
         let alertController = UIAlertController(title: nil, message: useMapMsg, preferredStyle: .alert)
         alertController.view.tintColor = SECONDARY_BAR_COLOR
         
-        let manualAction = UIAlertAction(title: "Enter Manually", style: .default) { action in }
+        let manualAction = UIAlertAction(title: "Enter Manually", style: .default) { action in
+//            let mapController = self.storyboard!.instantiateViewController(withIdentifier: "searchTable") as! searchTableVC
+//            mapController.data = categoryList
+//            self.navigationController?.navigationBar.tintColor = UIColor.white
+//            self.navigationController?.show(mapController, sender: nil)
+            
+        }
         
         let mapAction = UIAlertAction(title: "Use Map", style: .default) { action in
             let mapController = self.storyboard!.instantiateViewController(withIdentifier: "MapSelect") as! MapSelectVC

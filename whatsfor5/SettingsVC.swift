@@ -13,13 +13,8 @@ class SettingsVC: UIViewController {
     @IBOutlet weak var menuButton: UIBarButtonItem!
     override func viewDidLoad() {
         super.viewDidLoad()
+        addObservers()
 
-        if revealViewController() != nil {
-            menuButton.target = revealViewController()
-            menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
-            view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
-            view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
-        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,4 +23,16 @@ class SettingsVC: UIViewController {
     }
 
 
+}
+
+extension SettingsVC {
+    func addObservers() {
+        //Connect the side menu
+        if revealViewController() != nil {
+            menuButton.target = revealViewController()
+            menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
+            view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
+            view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        }
+    }
 }

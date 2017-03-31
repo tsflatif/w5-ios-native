@@ -88,3 +88,28 @@ extension LocationSearchTableVC {
         //dropPinZoomIn sendAddressBackAgain
     }
 }
+
+//CLGeocoder().reverseGeocodeLocation(location.location, completionHandler: {(placemarks, error) -> Void in
+//    
+//    if error != nil {
+//        println("Reverse geocoder failed with error" + error.localizedDescription)
+//        return
+//    }
+//    
+//    if placemarks.count > 0 {
+//        let pm = placemarks[0] as CLPlacemark
+//        
+//        //Printing to console to check value!
+//        println("\(pm.locality)")
+//        println("\(pm.subLocality)")
+//        
+//        self.locality = pm.locality as String
+//        if ( pm.subLocality != nil) {
+//            
+//            self.subLocality = pm.subLocality as String
+//        }
+//    }
+//    else {
+//        println("Problem with the data received from geocoder")
+//    }
+//})

@@ -6,6 +6,7 @@
 //  Copyright © 2017 Tauseef Latif. All rights reserved.
 //
 import UIKit
+import MapKit
 
 extension UITextField {
     // Add a line at the bottom of a textfield
@@ -156,5 +157,21 @@ func formatPhoneNumber(phone: String) -> String?  {
     return nil
 }
 
+
+//Open Apple Maps with coordinates for a location
+func displayMapForCoordinates (latitude: CLLocationDegrees, longitude: CLLocationDegrees, name: String) {
+    
+    let regionDistance:CLLocationDistance = 10000
+    let coordinates = CLLocationCoordinate2DMake(latitude, longitude)
+    let regionSpan = MKCoordinateRegionMakeWithDistance(coordinates, regionDistance, regionDistance)
+    let options = [
+        MKLaunchOptionsMapCenterKey: NSValue(mkCoordinate: regionSpan.center),
+        MKLaunchOptionsMapSpanKey: NSValue(mkCoordinateSpan: regionSpan.span)
+    ]
+    let placemark = MKPlacemark(coordinate: coordinates, addressDictionary: nil)
+    let mapItem = MKMapItem(placemark: placemark)
+    mapItem.name = name
+    mapItem.openInMaps(launchOptions: options)
+}
 
 

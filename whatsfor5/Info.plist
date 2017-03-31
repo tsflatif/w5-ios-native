@@ -52,5 +52,9 @@
 		<string>Roboto-Light.ttf</string>
 		<string>/Fonts/Roboto-Bold.ttf</string>
 	</array>
+	<key>FirebaseAutomaticScreenReportingEnabled</key>
+	<false/>
+	<key>FirebaseAppDelegateProxyEnabled</key>
+	<false/>
 </dict>
 </plist>

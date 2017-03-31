@@ -111,7 +111,7 @@ class AddNewResturant2VC: UIViewController, UITextFieldDelegate, UIGestureRecogn
     
     @IBAction func nextButtonPressed(_ sender: Any) {
     }
-
+    
 }
 
 extension AddNewResturant2VC {
