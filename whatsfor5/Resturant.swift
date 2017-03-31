@@ -98,7 +98,6 @@ class Resturant {
         self._resturantName = resturantName
         self._resturantAddress = resturantAdress
         self._resturantTime = checkIfOpen(resturantTime: resturantTime)
-        //self._walkTime = checkDistance()
         self._imageUrl = resturantImage
     }
     
@@ -119,9 +118,6 @@ class Resturant {
         //}
         
         if let latitude = dictionary["l"]?["latitude"] as? Double, let longitude = dictionary["l"]?["longitude"] as? Double {
-            print(latitude)
-            print(longitude)
-            print("This is ludacrishno")
             self._walkMinutes = checkDistance(latitude: latitude, longitude: longitude)
             self._walkTime = "\(walkMinutes) mins walk"
         }
@@ -170,11 +166,9 @@ class Resturant {
 //            locationManager.startUpdatingLocation()
 //        }
         
-        //let distanceInMeters = coordinate₀.distance(from: coordinate₁) // result is in meters
         let distanceInMeters = toLocation.distance(from: fromLocation)
         let walkMinutes = lround(distanceInMeters / (5000/60))
         
-        //return ("\(walkMinutes) mins walk")
         return walkMinutes
     }
 }
