@@ -92,7 +92,7 @@ class searchTableVC: UITableViewController, UISearchBarDelegate {
         let cell = self.tableView.cellForRow(at: indexPath)
         let text = cell?.textLabel?.text
         
-        let vc = storyboard?.instantiateViewController(withIdentifier: "AddNewResturantVC") as! AddNewResturantVC
+        let vc = storyboard?.instantiateViewController(withIdentifier: "AddNewRestaurantVC") as! AddNewRestaurantVC
         vc.category = text! as String
         print(vc.category)
         navigationController?.pushViewController(vc, animated: true)

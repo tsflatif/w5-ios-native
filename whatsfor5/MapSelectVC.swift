@@ -56,8 +56,8 @@ class MapSelectVC: UIViewController {
     
     func sendAddressBack(){
         if let selectedPin = selectedPin {
-            let vc = storyboard?.instantiateViewController(withIdentifier: "AddNewResturantVC") as! AddNewResturantVC
-            vc.resturantName = selectedPin.name! as String
+            let vc = storyboard?.instantiateViewController(withIdentifier: "AddNewRestaurantVC") as! AddNewRestaurantVC
+            vc.restaurantName = selectedPin.name! as String
             vc.streetAddress = "\(selectedPin.subThoroughfare! as String) \(selectedPin.thoroughfare! as String)"
             vc.postalCode = selectedPin.postalCode! as String
             vc.city = selectedPin.locality! as String
@@ -124,8 +124,8 @@ extension MapSelectVC: HandleMapSearch {
     
     func sendAddressBackAgain(placemark: MKPlacemark){
         //if let selectedPin = placemark {
-            let vc = storyboard?.instantiateViewController(withIdentifier: "AddNewResturantVC") as! AddNewResturantVC
-            vc.resturantName = placemark.name! as String
+            let vc = storyboard?.instantiateViewController(withIdentifier: "AddNewRestaurantVC") as! AddNewRestaurantVC
+            vc.restaurantName = placemark.name! as String
             vc.streetAddress = "\(placemark.subThoroughfare! as String) \(placemark.thoroughfare! as String)"
             vc.postalCode = placemark.postalCode! as String
             vc.city = placemark.locality! as String

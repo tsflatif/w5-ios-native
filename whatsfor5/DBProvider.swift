@@ -25,8 +25,8 @@ class DBProvider {
         return REF_BASE.child(USER)
     }
     
-    var REF_RESTURANTS: FIRDatabaseReference {
-        return REF_BASE.child(RESTURANTS)
+    var REF_RESTAURANTS: FIRDatabaseReference {
+        return REF_BASE.child(RESTAURANTS)
     }
     
     var REF_GEO: FIRDatabaseReference {
@@ -48,9 +48,9 @@ class DBProvider {
 //        REF_USERS.child(uid).updateChildValues(user)
 //    }
     
-    func saveResturant(withID: String, resturantName: String, resturantID: String) {
-        let data: Dictionary<String, Any> = [RESTURANT_NAME: resturantName, RESTURANT_ID: resturantID];
-        REF_RESTURANTS.child(withID).child(DATA).setValue(data);
+    func saveRestaurant(withID: String, restaurantName: String, restaurantID: String) {
+        let data: Dictionary<String, Any> = [RESTAURANT_NAME: restaurantName, RESTAURANT_ID: restaurantID];
+        REF_RESTAURANTS.child(withID).child(DATA).setValue(data);
     }
     
     func saveUser(withID: String, email: String, password: String) {

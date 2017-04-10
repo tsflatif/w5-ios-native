@@ -44,10 +44,10 @@ let cityList: [String] = ["Toronto"]
 var sideMenuOpen: Bool?
 
 // DBProvider
-let RESTURANTS = "resturants"
+let RESTAURANTS = "restaurants"
 let MENU = "menu"
-let RESTURANT_NAME = "resturant_name"
-let RESTURANT_ID = "resturant_id"
+let RESTAURANT_NAME = "restaurant_name"
+let RESTAURANT_ID = "restaurant_id"
 let EMAIL = "email"
 let PASSWORD = "password"
 let DATA = "data"

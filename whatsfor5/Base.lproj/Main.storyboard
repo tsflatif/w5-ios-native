@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="EMM-am-2Ei">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="EMM-am-2Ei">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,10 +15,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Resturant ListVC-->
+        <!--Restaurant ListVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ResturantListVC" customModule="whatsfor5" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="RestaurantListVC" customModule="whatsfor5" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -31,7 +31,7 @@
                                 <rect key="frame" x="20" y="8" width="374" height="656"/>
                                 <color key="backgroundColor" red="0.95294117647058818" green="0.95294117647058818" blue="0.95294117647058818" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ResturantCell" id="iOM-Yo-T64" customClass="ResturantCell" customModule="whatsfor5" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RestaurantCell" id="iOM-Yo-T64" customClass="RestaurantCell" customModule="whatsfor5" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="374" height="200"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iOM-Yo-T64" id="Cdz-va-9dK">
@@ -103,11 +103,11 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="resturantAddress" destination="iEF-rc-P2k" id="Dcz-o7-6Fb"/>
-                                            <outlet property="resturantDistance" destination="JB1-0X-vhM" id="SRh-6h-X6r"/>
-                                            <outlet property="resturantImg" destination="5t5-uG-NIK" id="ua7-Aa-P1x"/>
-                                            <outlet property="resturantName" destination="4Df-uS-5qP" id="p24-4z-NqX"/>
-                                            <outlet property="resturantOpenTime" destination="oNM-5H-y4c" id="xhf-w5-cDA"/>
+                                            <outlet property="restaurantAddress" destination="iEF-rc-P2k" id="Qxd-ly-ddp"/>
+                                            <outlet property="restaurantDistance" destination="JB1-0X-vhM" id="LU0-nR-1kG"/>
+                                            <outlet property="restaurantImg" destination="5t5-uG-NIK" id="sAI-w4-n0i"/>
+                                            <outlet property="restaurantName" destination="4Df-uS-5qP" id="QiT-uY-XuV"/>
+                                            <outlet property="restaurantOpenTime" destination="oNM-5H-y4c" id="6Gl-YX-Ivg"/>
                                             <segue destination="PXp-2V-zN9" kind="show" id="c7e-2N-QU5"/>
                                         </connections>
                                     </tableViewCell>
@@ -349,10 +349,10 @@
             </objects>
             <point key="canvasLocation" x="1508.6956521739132" y="501.35869565217394"/>
         </scene>
-        <!--Resturant DetailVC-->
+        <!--Restaurant DetailVC-->
         <scene sceneID="Pes-m1-dPt">
             <objects>
-                <viewController id="PXp-2V-zN9" customClass="ResturantDetailVC" customModule="whatsfor5" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="PXp-2V-zN9" customClass="RestaurantDetailVC" customModule="whatsfor5" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="05D-L2-Fcd"/>
                         <viewControllerLayoutGuide type="bottom" id="i2P-su-4v1"/>
@@ -479,7 +479,7 @@
                                                 <rect key="frame" x="0.0" y="28" width="358" height="35"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hM1-tQ-gCA" id="lLh-wu-OPI">
-                                                    <rect key="frame" x="0.0" y="0.0" width="358" height="34"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="358" height="34.666666666666664"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="LHm-bn-BSQ">
@@ -595,8 +595,8 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="wGG-6G-wu0">
                                                 <rect key="frame" x="0.0" y="0.0" width="326" height="40"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Resturant" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JvK-DX-4WK">
-                                                        <rect key="frame" x="0.0" y="0.0" width="74" height="40"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Restaurant" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JvK-DX-4WK">
+                                                        <rect key="frame" x="0.0" y="0.0" width="83" height="40"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -804,10 +804,10 @@
             </objects>
             <point key="canvasLocation" x="1509" y="1983"/>
         </scene>
-        <!--All ResturantVC-->
+        <!--All RestaurantVC-->
         <scene sceneID="5ht-Ac-GLk">
             <objects>
-                <viewController id="h0w-xr-YsA" customClass="AllResturantVC" customModule="whatsfor5" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="h0w-xr-YsA" customClass="AllRestaurantVC" customModule="whatsfor5" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="M2b-XI-lXw"/>
                         <viewControllerLayoutGuide type="bottom" id="OCX-f9-oJe"/>
@@ -816,7 +816,7 @@
                         <rect key="frame" x="0.0" y="64" width="414" height="672"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All Resturants" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fCJ-jW-zof">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All Restaurants" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fCJ-jW-zof">
                                 <rect key="frame" x="107" y="326" width="200" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="gHb-RQ-BvA"/>
@@ -846,10 +846,10 @@
             </objects>
             <point key="canvasLocation" x="1508.6956521739132" y="2697.554347826087"/>
         </scene>
-        <!--Add New ResturantVC-->
+        <!--Add New RestaurantVC-->
         <scene sceneID="38o-y1-l5P">
             <objects>
-                <viewController storyboardIdentifier="AddNewResturantVC" id="oqX-ly-j2K" customClass="AddNewResturantVC" customModule="whatsfor5" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddNewResturantVC" id="oqX-ly-j2K" customClass="AddNewRestaurantVC" customModule="whatsfor5" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6K3-8M-dtO"/>
                         <viewControllerLayoutGuide type="bottom" id="ThE-tx-R3a"/>
@@ -892,7 +892,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Resturant Name" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="0NY-wz-1xQ" customClass="HoshiTextField" customModule="TextFieldEffects">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Restaurant Name" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="0NY-wz-1xQ" customClass="HoshiTextField" customModule="TextFieldEffects">
                                         <rect key="frame" x="16" y="251" width="382" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="CVs-Jh-XR0"/>
@@ -1003,8 +1003,8 @@
                         <outlet property="categoryText" destination="TNf-bK-Cke" id="Wib-Om-ePH"/>
                         <outlet property="cityText" destination="OsM-Vc-YQN" id="LnN-Ws-U9T"/>
                         <outlet property="menuButton" destination="hfD-by-f0d" id="g86-Sw-4m6"/>
-                        <outlet property="resturantImageView" destination="9z0-d2-Sqy" id="JUf-rB-GBA"/>
-                        <outlet property="resturantNameText" destination="0NY-wz-1xQ" id="cEw-FH-MlQ"/>
+                        <outlet property="restaurantImageView" destination="9z0-d2-Sqy" id="Bbt-1d-HTZ"/>
+                        <outlet property="restaurantNameText" destination="0NY-wz-1xQ" id="w1h-eQ-7Ry"/>
                         <segue destination="zHo-wI-cKc" kind="show" identifier="AddNewResturant2VC" id="Jd8-oO-I4r"/>
                     </connections>
                 </viewController>
@@ -1137,7 +1137,7 @@
                                                 <rect key="frame" x="0.0" y="28" width="358" height="50"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Xq8-jK-t8z" id="AbE-tG-ewk">
-                                                    <rect key="frame" x="0.0" y="0.0" width="358" height="49"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="358" height="49.666666666666664"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="feP-UE-BHd">
@@ -1328,7 +1328,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="All Resturants" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ci4-32-ZBB">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="All Restaurants" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ci4-32-ZBB">
                                                     <rect key="frame" x="8" y="6" width="208" height="31"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="22"/>
@@ -1339,7 +1339,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.92620444297790527" green="0.93612229824066162" blue="0.94110381603240967" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
-                                            <segue destination="teP-SS-snm" kind="custom" customClass="SWRevealViewControllerSeguePushController" animates="NO" id="NfB-j4-hs3"/>
+                                            <segue destination="teP-SS-snm" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="NfB-j4-hs3"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="cue-Nf-IQV">
@@ -1349,8 +1349,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add A New Resturant" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="keI-MK-rst">
-                                                    <rect key="frame" x="8" y="6" width="206" height="31"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add A New Restaurant" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="keI-MK-rst">
+                                                    <rect key="frame" x="8" y="6" width="227" height="31"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="22"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1395,7 +1395,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YC7-Vn-wfe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-152" y="1246"/>
+            <point key="canvasLocation" x="-152.17391304347828" y="1245.6521739130435"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="EE2-Qw-FHg">
@@ -1496,10 +1496,10 @@
             </objects>
             <point key="canvasLocation" x="696" y="4115"/>
         </scene>
-        <!--Add New Resturant2VC-->
+        <!--Add New Restaurant2VC-->
         <scene sceneID="S6F-Qr-ewA">
             <objects>
-                <viewController storyboardIdentifier="AddNewResturant2VC" id="zHo-wI-cKc" customClass="AddNewResturant2VC" customModule="whatsfor5" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddNewRestaurant2VC" id="zHo-wI-cKc" customClass="AddNewRestaurant2VC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="BKq-bL-12y"/>
                         <viewControllerLayoutGuide type="bottom" id="oai-El-OOA"/>
@@ -1717,7 +1717,7 @@
                         <outlet property="emailText" destination="Qzy-sv-hfW" id="6iF-Hl-z2p"/>
                         <outlet property="phoneText" destination="jNg-l5-HxX" id="04m-s0-Pma"/>
                         <outlet property="postalCodeText" destination="9BJ-m2-DtJ" id="Mnx-1h-70g"/>
-                        <outlet property="resturantImageView" destination="8ZH-5u-H2e" id="ZqX-1k-ne9"/>
+                        <outlet property="restaurantImageView" destination="8ZH-5u-H2e" id="6Ln-BL-517"/>
                         <outlet property="streetAddressText" destination="bx9-YB-qGp" id="ibc-fG-Uk9"/>
                         <outlet property="websiteText" destination="MwD-nQ-tj8" id="I3Z-V2-6rh"/>
                     </connections>
@@ -1775,18 +1775,18 @@
                                 <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PL9-7M-fSJ" id="jri-JL-06d">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="PVY-Fe-zth">
-                                            <rect key="frame" x="15" y="4" width="34" height="21"/>
+                                            <rect key="frame" x="15" y="5" width="33.333333333333336" height="20.333333333333332"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="LzK-io-ZAi">
-                                            <rect key="frame" x="15" y="25" width="44" height="15"/>
+                                            <rect key="frame" x="14.999999999999996" y="25.333333333333332" width="43.666666666666664" height="14.333333333333334"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                             <nil key="textColor"/>
@@ -1824,11 +1824,11 @@
                                 <rect key="frame" x="0.0" y="72" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="E6U-wR-kuO" id="Nbg-PA-McJ">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="oEm-if-og6">
-                                            <rect key="frame" x="15" y="0.0" width="384" height="43"/>
+                                            <rect key="frame" x="15" y="0.0" width="384" height="43.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                             <nil key="textColor"/>
@@ -1851,10 +1851,10 @@
             </objects>
             <point key="canvasLocation" x="3901" y="4114"/>
         </scene>
-        <!--Add New Resturant3VC-->
+        <!--Add New Restaurant3VC-->
         <scene sceneID="W21-m7-ilj">
             <objects>
-                <viewController id="cSu-0l-ph2" customClass="AddNewResturant3VC" customModule="whatsfor5" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="cSu-0l-ph2" customClass="AddNewRestaurant3VC" customModule="whatsfor5" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8br-og-ZBz"/>
                         <viewControllerLayoutGuide type="bottom" id="Lhm-Ka-6hF"/>
@@ -1886,7 +1886,7 @@
                                                 <rect key="frame" x="0.0" y="28" width="382" height="44"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dgo-ET-eRY" id="CHj-bW-BZ3">
-                                                    <rect key="frame" x="0.0" y="0.0" width="382" height="43"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="382" height="43.666666666666664"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="27l-5k-nEA">
